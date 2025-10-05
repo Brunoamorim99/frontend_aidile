@@ -1,28 +1,15 @@
-import React, { useEffect, useState } from 'react';
-
+import React from "react";
 
 function Notifications() {
-const [notifications, setNotifications] = useState([]);
-
-
-useEffect(() => {
-fetch('http://localhost:5000/notifications')
-.then(res => res.json())
-.then(data => setNotifications(data));
-}, []);
-
-
-return (
-<div>
-<h2>Notifications</h2>
-<ul>
-{notifications.map(note => (
-<li key={note.id}>{note.message}</li>
-))}
-</ul>
-</div>
-);
+    return (
+        <div>
+            <h2>Notifications</h2>
+            <ul>
+                <li>Roof Repair scheduled for 2025-10-10</li>
+                <li>Elevator Maintenance scheduled for 2025-10-12</li>
+            </ul>
+        </div>
+    );
 }
-
 
 export default Notifications;

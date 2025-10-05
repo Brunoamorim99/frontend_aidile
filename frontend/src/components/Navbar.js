@@ -1,18 +1,28 @@
-import React from 'react';
+import React from "react";
 
-
-function Navbar() {
-return (
-<nav>
-<h1>Aidile</h1>
-<ul>
-<li>Dashboard</li>
-<li>Calendar</li>
-<li>Notifications</li>
-</ul>
-</nav>
-);
+function Navbar({ setPage, currentPage }) {
+    return (
+        <nav className='navbar'>
+            <h1 className='app-title'>Aidile Construction Tracker</h1>
+            <div className='nav-links'>
+                <button
+                    className={currentPage === "dashboard" ? "active" : ""}
+                    onClick={() => setPage("dashboard")}>
+                    Dashboard
+                </button>
+                <button
+                    className={currentPage === "calendar" ? "active" : ""}
+                    onClick={() => setPage("calendar")}>
+                    Calendar
+                </button>
+                <button
+                    className={currentPage === "notifications" ? "active" : ""}
+                    onClick={() => setPage("notifications")}>
+                    Notifications
+                </button>
+            </div>
+        </nav>
+    );
 }
-
 
 export default Navbar;
