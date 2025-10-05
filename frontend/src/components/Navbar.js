@@ -20,6 +20,11 @@ function Navbar({ setPage, currentPage }) {
                     onClick={() => setPage("notifications")}>
                     Notifications
                 </button>
+                <button
+                    className={currentPage === "projectDetails" ? "active" : ""}
+                    onClick={() => setPage("projectDetails")}>
+                    Project Details
+                </button>
             </div>
         </nav>
     );

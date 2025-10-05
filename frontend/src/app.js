@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Dashboard from "./components/Dashboard";
 import CalendarView from "./components/CalendarView";
 import Notifications from "./components/Notifications";
+import ProjectDetails from "./components/ProjectDetails";
 import "./styles/main.css";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
                 {page === "dashboard" && <Dashboard />}
                 {page === "calendar" && <CalendarView />}
                 {page === "notifications" && <Notifications />}
+                {page === "projectDetails" && <ProjectDetails />}
             </main>
         </div>
     );
