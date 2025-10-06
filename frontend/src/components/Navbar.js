@@ -6,6 +6,16 @@ function Navbar({ setPage, currentPage }) {
             <h1 className='app-title'>Aidile Construction Tracker</h1>
             <div className='nav-links'>
                 <button
+                    className={currentPage === "login" ? "active" : ""}
+                    onClick={() => setPage("login")}>
+                    Login
+                </button>
+                <button
+                    className={currentPage === "signup" ? "active" : ""}
+                    onClick={() => setPage("signup")}>
+                    Sign Up
+                </button>
+                <button
                     className={currentPage === "dashboard" ? "active" : ""}
                     onClick={() => setPage("dashboard")}>
                     Dashboard
