@@ -1,7 +1,6 @@
 import React from "react";
 
 function ProjectDetails() {
-    // Dummy project data
     const project = {
         title: "Roof Repair",
         what: "Fix leaks and reinforce the roof structure",
